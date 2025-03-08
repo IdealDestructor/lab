@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo-container">
+          <a href="./">
+            <img src="./assets/img/logo.svg" alt="Logo" class="logo" />
+          </a>
+        </div>
+      </header>
+
+      <main>
+        <section>
+          <div class="content wrapper">
+            <ol class="post-card-box clearfix">
+              <li>
+                <div class="post-card">
+                  <a
+                    href="http://idealdestructor.github.io/Doraemon"
+                    title="Doraemon"
+                    class="post-card-image"
+                    style="
+                      background: url('./assets/img/doraemon.jpg') center
+                        no-repeat;
+                      background-size: cover;
+                    "
+                  >
+                  </a>
+                  <div class="post-card-body">
+                    <p class="post-card-title-and-meta">
+                      <a
+                        href="http://idealdestructor.github.io/Doraemon"
+                        class="post-card-link"
+                      >
+                        Doraemon
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="post-card">
+                  <a
+                    href="http://todo.deqiang.wang/#/"
+                    title="POMOTODO"
+                    class="post-card-image"
+                    style="
+                      background: url('./assets/img/todo.jpg') center no-repeat;
+                      background-size: cover;
+                    "
+                  >
+                  </a>
+                  <div class="post-card-body">
+                    <p class="post-card-title-and-meta">
+                      <a
+                        href="http://todo.deqiang.wang/#/"
+                        class="post-card-link"
+                      >
+                        POMOTODO
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="post-card">
+                  <a
+                    href="https://idealdestructor.github.io/stars/index.html"
+                    title="Starry"
+                    class="post-card-image"
+                    style="
+                      background: url('./assets/img/star.png') center no-repeat;
+                      background-size: cover;
+                    "
+                  >
+                  </a>
+                  <div class="post-card-body">
+                    <p class="post-card-title-and-meta">
+                      <a
+                        href="https://idealdestructor.github.io/stars/index.html"
+                        class="post-card-link"
+                      >
+                        Starry
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="post-card">
+                  <a
+                    href="https://aihub.deqiang.wang/"
+                    title="AIHub"
+                    class="post-card-image"
+                    style="
+                      background: url('./assets/img/aihub.jpg') center no-repeat;
+                      background-size: cover;
+                    "
+                  >
+                  </a>
+                  <div class="post-card-body">
+                    <p class="post-card-title-and-meta">
+                      <a
+                        href="https://aihub.deqiang.wang/"
+                        class="post-card-link"
+                      >
+                        AIHub
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p></p>
+      </footer>
+    </div>
+  </body>
+  <style>
+    header {
+      padding: 20px 0;
+      text-align: center;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .logo {
+      max-height: 60px;
+      width: auto;
+    }
+    .content {
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+    }
+    .wrapper {
+      width: 960px;
+      max-width: 90%;
+      margin: 0.75em auto 0.75em;
+      position: relative;
+    }
+    .post-card-box {
+      margin: 50px 0 15px;
+      padding: 0;
+    }
+    .post-card-box li {
+      position: relative;
+      list-style: none;
+      float: left;
+      width: 50%;
+    }
+    .post-card {
+      position: relative;
+    }
+    .post-card-image {
+      display: block;
+      width: 100%;
+      min-height: 150px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .post-card-image::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.15);
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s;
+    }
+    .post-card:hover .post-card-image::after {
+      background: rgba(0, 0, 0, 0);
+    }
+    .post-card:hover .post-card-body {
+      background-color: #000000bf;
+    }
+    .post-card-body {
+      position: absolute;
+      right: 0;
+      bottom: 5%;
+      background-color: #00000099;
+      padding-left: 5px;
+      width: 95%;
+    }
+    .post-card-tags {
+      font-size: 10px;
+    }
+    .tag {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: white;
+      white-space: nowrap;
+    }
+    .tag:hover {
+      text-decoration: underline;
+      color: var(--grey4);
+    }
+    .post-card-title-and-meta {
+      margin: 0;
+      color: white;
+      line-height: 1.2;
+    }
+    .post-card-link {
+      text-decoration: none;
+      font-family: var(--font2), sans-serif;
+      font-weight: var(--font2-bold);
+      text-transform: uppercase;
+      color: white;
+    }
+    .post-card-link:hover {
+      opacity: 0.75;
+      color: var(--grey4);
+    }
+  </style>
+</html>
