@@ -3,150 +3,306 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lab</title>
+    <title>析构理想</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .header {
+        text-align: center;
+        padding-bottom: 60px;
+        padding-top: 40px;
+        border-bottom: 1px solid #eee;
+      }
+      /* .header::before {
+        content: "";
+        width: 100%;
+        position: absolute;
+        height: 2px;
+        background: rgba(0, 0, 0, 0.05);
+        left: 0;
+        bottom: -3rem;
+      } */
+      .avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+      }
+      .site-title {
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+      }
+      .site-subtitle {
+        font-size: 16px;
+        margin: 0;
+        line-height: 1.35;
+        color: rgba(51, 51, 51, 0.6);
+        font-weight: 300;
+      }
+      .posts-section {
+        margin-top: 40px;
+        clear: both;
+      }
+      .section-title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        font-size: 28px;
+      }
+      .section-title::before {
+        content: "";
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: #ffca27;
+        margin-right: 15px;
+      }
+      .post {
+        margin-bottom: 50px;
+      }
+      .post-title {
+        font-size: 24px;
+        margin-bottom: 15px;
+        font-weight: normal;
+      }
+      .post-title a {
+        color: #333;
+        text-decoration: none;
+      }
+      .post-title a:hover {
+        text-decoration: underline;
+      }
+      .post-excerpt {
+        color: #666;
+        margin-bottom: 15px;
+      }
+      .post-meta {
+        display: flex;
+        justify-content: space-between;
+        color: #999;
+        font-size: 14px;
+      }
+      .read-more {
+        display: inline-block;
+        color: #666;
+        text-decoration: none;
+      }
+      .read-more:hover {
+        text-decoration: underline;
+      }
+      /* 页脚样式 */
+      .site-footer {
+        margin-top: 60px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+        text-align: center;
+        color: #666;
+        font-size: 14px;
+      }
+      .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      .footer-links {
+        display: flex;
+        gap: 15px;
+        margin: 10px 0;
+      }
+      .footer-links a {
+        color: #666;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      .footer-links a:hover {
+        color: #333;
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <div class="logo-container">
-          <a href="./">
-            <img src="./assets/img/logo.svg" alt="Logo" class="logo" />
-          </a>
+    <header class="header">
+      <img src="images/avatar.jpg" alt="头像" class="avatar" />
+      <h1 class="site-title">析构理想</h1>
+      <p class="site-subtitle">I d e a l D e s t r u c t o r</p>
+    </header>
+
+    <main>
+      <section class="posts-section">
+        <h2 class="section-title">Projects</h2>
+        <div class="content wrapper">
+          <ol class="post-card-box clearfix">
+            <li>
+              <div class="post-card">
+                <a
+                  href="http://idealdestructor.github.io/Doraemon"
+                  title="Doraemon"
+                  class="post-card-image"
+                  style="
+                    background: url('images/doraemon.jpg') center no-repeat;
+                    background-size: cover;
+                  "
+                >
+                </a>
+                <div class="post-card-body">
+                  <p class="post-card-title-and-meta">
+                    <a
+                      href="http://idealdestructor.github.io/Doraemon"
+                      class="post-card-link"
+                    >
+                      Doraemon
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="post-card">
+                <a
+                  href="http://todo.deqiang.wang/#/"
+                  title="POMOTODO"
+                  class="post-card-image"
+                  style="
+                    background: url('images/todo.jpg') center no-repeat;
+                    background-size: cover;
+                  "
+                >
+                </a>
+                <div class="post-card-body">
+                  <p class="post-card-title-and-meta">
+                    <a
+                      href="http://todo.deqiang.wang/#/"
+                      class="post-card-link"
+                    >
+                      POMOTODO
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="post-card">
+                <a
+                  href="https://idealdestructor.github.io/stars/index.html"
+                  title="Starry"
+                  class="post-card-image"
+                  style="
+                    background: url('images/star.png') center no-repeat;
+                    background-size: cover;
+                  "
+                >
+                </a>
+                <div class="post-card-body">
+                  <p class="post-card-title-and-meta">
+                    <a
+                      href="https://idealdestructor.github.io/stars/index.html"
+                      class="post-card-link"
+                    >
+                      Starry
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="post-card">
+                <a
+                  href="https://aihub.deqiang.wang/"
+                  title="AIHub"
+                  class="post-card-image"
+                  style="
+                    background: url('images/aihub.jpg') center no-repeat;
+                    background-size: cover;
+                  "
+                >
+                </a>
+                <div class="post-card-body">
+                  <p class="post-card-title-and-meta">
+                    <a
+                      href="https://aihub.deqiang.wang/"
+                      class="post-card-link"
+                    >
+                      AIHub
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ol>
         </div>
-      </header>
+      </section>
+      <section class="posts-section">
+        <h2 class="section-title">Posts</h2>
 
-      <main>
-        <section>
-          <div class="content wrapper">
-            <ol class="post-card-box clearfix">
-              <li>
-                <div class="post-card">
-                  <a
-                    href="http://idealdestructor.github.io/Doraemon"
-                    title="Doraemon"
-                    class="post-card-image"
-                    style="
-                      background: url('./assets/img/doraemon.jpg') center
-                        no-repeat;
-                      background-size: cover;
-                    "
-                  >
-                  </a>
-                  <div class="post-card-body">
-                    <p class="post-card-title-and-meta">
-                      <a
-                        href="http://idealdestructor.github.io/Doraemon"
-                        class="post-card-link"
-                      >
-                        Doraemon
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div class="post-card">
-                  <a
-                    href="http://todo.deqiang.wang/#/"
-                    title="POMOTODO"
-                    class="post-card-image"
-                    style="
-                      background: url('./assets/img/todo.jpg') center no-repeat;
-                      background-size: cover;
-                    "
-                  >
-                  </a>
-                  <div class="post-card-body">
-                    <p class="post-card-title-and-meta">
-                      <a
-                        href="http://todo.deqiang.wang/#/"
-                        class="post-card-link"
-                      >
-                        POMOTODO
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div class="post-card">
-                  <a
-                    href="https://idealdestructor.github.io/stars/index.html"
-                    title="Starry"
-                    class="post-card-image"
-                    style="
-                      background: url('./assets/img/star.png') center no-repeat;
-                      background-size: cover;
-                    "
-                  >
-                  </a>
-                  <div class="post-card-body">
-                    <p class="post-card-title-and-meta">
-                      <a
-                        href="https://idealdestructor.github.io/stars/index.html"
-                        class="post-card-link"
-                      >
-                        Starry
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="post-card">
-                  <a
-                    href="https://aihub.deqiang.wang/"
-                    title="AIHub"
-                    class="post-card-image"
-                    style="
-                      background: url('./assets/img/aihub.jpg') center no-repeat;
-                      background-size: cover;
-                    "
-                  >
-                  </a>
-                  <div class="post-card-body">
-                    <p class="post-card-title-and-meta">
-                      <a
-                        href="https://aihub.deqiang.wang/"
-                        class="post-card-link"
-                      >
-                        AIHub
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </ol>
+        <article class="post">
+          <h3 class="post-title">
+            <a href="post1.html"
+              >人只不过是自然与精神之间一座危险又狭窄的桥梁</a
+            >
+          </h3>
+          <p class="post-excerpt">
+            我听便灵魂与肉体的安排，去经历罪孽，追逐内欲和财富，去贪慕虚荣，以经历最绝望的羞耻，以学会放弃挣扎，学会热爱世界。我不再将这个世界与我塑造的完美世界比较，而是接受这个世界，爱它，属于它。
+          </p>
+          <div class="post-meta">
+            <a href="post1.html" class="read-more">→ Read More</a>
+            <span class="post-date">/ 2022-05-20 /</span>
           </div>
-        </section>
-      </main>
+        </article>
 
-      <footer>
-        <p></p>
-      </footer>
-    </div>
+        <article class="post">
+          <h3 class="post-title">
+            <a href="post2.html">「复古未来」Synthwave合成器浪潮</a>
+          </h3>
+          <p class="post-excerpt">
+            BACK TO THE FUTURE: 重回 80s 霓虹情结与赛博幻象
+          </p>
+          <div class="post-meta">
+            <a href="post2.html" class="read-more">→ Read More</a>
+            <span class="post-date">/ 2021-03-11 /</span>
+          </div>
+        </article>
+
+        <article class="post">
+          <h3 class="post-title">
+            <a href="post3.html">冰岛、新古典音乐、现代极简与存在主义</a>
+          </h3>
+          <p class="post-excerpt">真正美好的事物从来不会寻求关注。</p>
+          <div class="post-meta">
+            <a href="post3.html" class="read-more">→ Read More</a>
+            <span class="post-date">/ 2019-05-08 /</span>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <!-- <div>Copyright © 2025 All rights reserved</div> -->
+        <div class="footer-links">
+          <a href="https://twitter.com/idealdestructor">Twitter</a> ·
+          <a href="https://github.com/idealdestructor">GitHub</a> ·
+          <a href="https://weibo.com/idealdestructor">Weibo</a>
+        </div>
+      </div>
+    </footer>
   </body>
   <style>
-    header {
-      padding: 20px 0;
-      text-align: center;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 15px;
-    }
-    .logo-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .logo {
-      max-height: 60px;
-      width: auto;
-    }
     .content {
       -webkit-box-flex: 1;
       -webkit-flex-grow: 1;
@@ -154,14 +310,15 @@
       flex-grow: 1;
     }
     .wrapper {
-      width: 960px;
-      max-width: 90%;
-      margin: 0.75em auto 0.75em;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
       position: relative;
     }
     .post-card-box {
-      margin: 50px 0 15px;
+      margin: 40px 0 15px;
       padding: 0;
+      overflow: hidden;
     }
     .post-card-box li {
       position: relative;
@@ -234,6 +391,11 @@
     .post-card-link:hover {
       opacity: 0.75;
       color: var(--grey4);
+    }
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
     }
   </style>
 </html>
