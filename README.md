@@ -1,10 +1,29 @@
-# Astro Starter Kit: Basics
+# 🌌 Personal Portfolio – Lautaro 
 
-```sh
-npm create astro@latest -- --template basics
-```
+---
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Características principales
+
+- ⚡️ Construido con **Astro** y **React** 
+- 🎨 **Diseño responsive**
+- 🧠 **Filtrado dinámico de proyectos**
+- 💬 Secciones personalizables: *Sobre mí*, *Proyectos*, *Experiencia*, *Contacto*  
+
+---
+
+## 🧩 Tecnologías utilizadas
+
+- [Astro](https://astro.build/)  
+- [TailwindCSS](https://tailwindcss.com/)  
+- [TypeScript / JavaScript]  
+- [React (en componentes selectivos)]  
+- [Vite](https://vitejs.dev/)  
+
+---
+
+## 📂 Estructura del proyecto
+
+
 
 ## 🚀 Project Structure
 
@@ -13,17 +32,15 @@ Inside of your Astro project, you'll see the following folders and files:
 ```text
 /
 ├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+│ └── images/ # Recursos estáticos
+├── src/
+│ ├── components/ # Componentes reutilizables
+│ ├── layouts/ # Layout base
+│ ├── pages/ # Páginas principales (index, proyectos, etc.)
+│ ├── scripts/ # JS para interactividad (filtro, animaciones)
+│ ├── styles/ # CSS global o módulos
+│ └── data/ # Datos (proyectos, experiencia)
+└── astro.config.mjs
 ```
 
 To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
@@ -41,6 +58,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+---
+[Diseño sin título.pdf](https://github.com/user-attachments/files/23424092/Diseno.sin.titulo.pdf)
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
