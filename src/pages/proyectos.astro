@@ -1,0 +1,65 @@
+---
+import "../styles/projects.css";
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/commons/hero/hero.astro";
+import ProjectCard from "../components/project/proyectCard.astro";
+import Banner from "../components/commons/banners/banner.astro";
+import { proyectos } from "../data/projectData.js";
+---
+
+<Layout title="Proyectos" description="Proyectos">
+  <Hero titulo="Proyectos" />
+  <!-- Botones -->
+  <div class="mt-6 mb-6 flex flex-wrap justify-center gap-3">
+    <button
+      class="filter-btn cursor-pointer rounded-full bg-[#69c7c7] px-5 py-1.5 text-sm font-bold text-[#1d1250] drop-shadow-[2px_2px_0_#7836cf]"
+      data-filter="all"
+    >
+      Todos
+    </button>
+    <button
+      class="filter-btn cursor-pointer rounded-full bg-[#69c7c7] px-5 py-1.5 text-sm font-bold text-[#1d1250] drop-shadow-[2px_2px_0_#7836cf]"
+      data-filter="fullstack"
+    >
+      Full Stack
+    </button>
+    <button
+      class="filter-btn cursor-pointer rounded-full bg-[#69c7c7] px-5 py-1.5 text-sm font-bold text-[#1d1250] drop-shadow-[2px_2px_0_#7836cf]"
+      data-filter="frontend"
+    >
+      Frontend
+    </button>
+    <button
+      class="filter-btn cursor-pointer rounded-full bg-[#69c7c7] px-5 py-1.5 text-sm font-bold text-[#1d1250] drop-shadow-[2px_2px_0_#7836cf]"
+      data-filter="backend"
+    >
+      Backend
+    </button>
+  </div>
+
+  <!-- Cards -->
+  <div
+    id="projects-container"
+    class="4xl:px-96 flex flex-wrap justify-center gap-5 px-3 pt-5 xl:px-32 2xl:px-60"
+  >
+    {
+      proyectos.map((proyecto) => (
+        <ProjectCard
+          titulo={proyecto.titulo}
+          descripcion={proyecto.descripcion}
+          imagen={proyecto.imagen}
+          tecnologias={proyecto.tecnologias}
+          demo={proyecto.demo}
+          codigo={proyecto.codigo}
+          categoria={proyecto.categoria}
+        />
+      ))
+    }
+  </div>
+
+  <Banner />
+</Layout>
+
+<script type="module">
+  import "/src/scripts/projectFilter.js";
+</script>
