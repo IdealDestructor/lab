@@ -1,14 +1,8 @@
 ---
 import { FiMenu, FiX } from "react-icons/fi";
 import NotificationBell from "./notificationBell.jsx";
-import {
-  FaXTwitter,
-  FaLinkedinIn,
-  FaGithub,
-  FaInstagram,
-} from "react-icons/fa6";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa6";
 
-const currentPath = Astro.url.pathname;
 const links = [
   { name: "Inicio", href: "/" },
   { name: "Proyectos", href: "/proyectos" },
@@ -36,17 +30,13 @@ const links = [
       </a>
 
       <!-- Desktop Links -->
-      <ul class="hidden md:flex items-center space-x-8">
+      <ul id="navbar-links" class="hidden md:flex items-center space-x-8">
         {
           links.map((link) => (
             <li>
               <a
                 href={link.href}
-                class={`font-bold transition-colors duration-300 ${
-                  currentPath === link.href
-                    ? "text-[#7d2dac] font-extrabold"
-                    : "text-white hover:text-[#7d2dac] font-extrabold"
-                }`}
+                class="nav-link font-bold transition-colors duration-300 text-white hover:text-[#7d2dac]"
               >
                 {link.name}
               </a>
@@ -54,11 +44,28 @@ const links = [
           ))
         }
 
-        <!-- Campana notificaciones -->
         <li class="flex items-center gap-3">
           <NotificationBell client:visible />
-          <FaLinkedinIn className="h-7 w-7 cursor-pointer hover:text-[#7836cf]" />
-          <FaGithub className="h-7 w-7 cursor-pointer hover:text-[#7836cf]" />
+
+          <a
+            href="https://www.linkedin.com/in/lautaro-rodr%C3%ADguez-collins-40505624a/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedinIn
+              className="h-7 w-7 cursor-pointer hover:text-[#7836cf]"
+            />
+          </a>
+
+          <a
+            href="https://github.com/Lautaro-R-collins"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <FaGithub className="h-7 w-7 cursor-pointer hover:text-[#7836cf]" />
+          </a>
         </li>
       </ul>
 
@@ -89,17 +96,13 @@ const links = [
       </label>
     </div>
 
-    <ul class="flex flex-col space-y-6 mt-6 ml-6">
+    <ul id="navbar-links-mobile" class="flex flex-col space-y-6 mt-6 ml-6">
       {
         links.map((link) => (
           <li>
             <a
               href={link.href}
-              class={`text-lg font-bold transition-colors duration-300 ${
-                currentPath === link.href
-                  ? "text-[#69c7c7]"
-                  : "text-white hover:text-[#69c7c7]"
-              }`}
+              class="nav-link-mobile text-lg font-bold text-white hover:text-[#69c7c7] transition-colors duration-300"
             >
               {link.name}
             </a>
@@ -109,3 +112,45 @@ const links = [
     </ul>
   </div>
 </nav>
+
+<script>
+  (function () {
+    function markActiveLinks() {
+      const currentPath = window.location.pathname.replace(/\/$/, "") || "/";
+      const desktopLinks = Array.from(
+        document.querySelectorAll("#navbar-links .nav-link")
+      );
+      const mobileLinks = Array.from(
+        document.querySelectorAll("#navbar-links-mobile .nav-link-mobile")
+      );
+
+      const allLinks = [...desktopLinks, ...mobileLinks];
+
+      allLinks.forEach((link) => {
+        const hrefAttr = link.getAttribute("href");
+        const href = hrefAttr?.replace(/\/$/, "") || "" || "/";
+
+        if (href === currentPath) {
+          link.classList.add("text-[#7d2dac]", "font-extrabold");
+          link.classList.remove("text-white");
+        } else {
+          link.classList.remove("text-[#7d2dac]", "font-extrabold");
+          if (!link.classList.contains("hover:text-[#7d2dac]")) {
+            link.classList.add("text-white");
+          }
+        }
+      });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", markActiveLinks);
+    } else {
+      markActiveLinks();
+    }
+
+    window.addEventListener("popstate", markActiveLinks);
+    document.addEventListener("astro:page-load", markActiveLinks);
+    document.addEventListener("astro:after-swap", markActiveLinks);
+    window.addEventListener("load", () => setTimeout(markActiveLinks, 50));
+  })();
+</script>
