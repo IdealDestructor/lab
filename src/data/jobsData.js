@@ -1,7 +1,7 @@
 export const jobs = [
   {
     title: "Frontend Developer - Neowyze",
-    time: ["12/2024 - 03/2025"],
+    time: ["12/2024 - 05/2025"],
     description:
       "Mis tareas en Neowyze consisten en desarrollar webs responsivas basadas en diseños proporcionados en Figma, utilizando Astro, React, Tailwind y otras librerías frontend.",
     list: [
