@@ -6,12 +6,12 @@ export default function NotificationBell() {
   const [notifications, setNotifications] = useState([]);
   const containerRef = useRef(null);
 
-  // Notificaciones
+  // Notifications
   const baseNotifications = [
-    { id: 1, text: "Nuevo proyecto publicado 🚀", read: false },
+    { id: 1, text: "New project published 🚀", read: false },
     {
       id: 2,
-      text: "Hey como va?, te comento que actualmente estoy aprendiendo desarrollo móvil ✨",
+      text: "Hey, how's it going? I'm currently learning mobile development ✨",
       read: false,
     },
   ];
@@ -92,7 +92,7 @@ export default function NotificationBell() {
           <div className="p-3">
             <div className="mb-2 flex items-center justify-between">
               <h4 className="text-xm font-bold text-gray-200 drop-shadow-[1px_1px_0_#7836cf]">
-                Notificaciones
+                Notifications
               </h4>
             </div>
 
@@ -105,7 +105,7 @@ export default function NotificationBell() {
                 ))}
               </ul>
             ) : (
-              <p className="text-sm text-gray-400">No hay notificaciones.</p>
+              <p className="text-sm text-gray-400">No notifications.</p>
             )}
           </div>
         </div>

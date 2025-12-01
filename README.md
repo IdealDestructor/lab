@@ -1,4 +1,4 @@
-# 🌌 Personal Portfolio – Lautaro 
+# 🌌 Personal Portfolio 
 
 ---
 
@@ -6,8 +6,8 @@
 
 - ⚡️ Construido con **Astro** y **React** 
 - 🎨 **Diseño responsive**
-- 🧠 **Filtrado dinámico de proyectos**
-- 💬 Secciones personalizables: *Sobre mí*, *Proyectos*, *Experiencia*, *Contacto*  
+- 🧠 **Filtrado dinámico de projects**
+- 💬 Secciones personalizables: *Sobre mí*, *projects*, *Experiencia*, *Contacto*  
 
 ---
 
@@ -36,10 +36,10 @@ Inside of your Astro project, you'll see the following folders and files:
 ├── src/
 │ ├── components/ # Componentes reutilizables
 │ ├── layouts/ # Layout base
-│ ├── pages/ # Páginas principales (index, proyectos, etc.)
+│ ├── pages/ # Páginas principales (index, projects, etc.)
 │ ├── scripts/ # JS para interactividad (filtro, animaciones)
 │ ├── styles/ # CSS global o módulos
-│ └── data/ # Datos (proyectos, experiencia)
+│ └── data/ # Datos (projects, experiencia)
 └── astro.config.mjs
 ```
 

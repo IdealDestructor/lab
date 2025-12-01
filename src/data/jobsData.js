@@ -1,34 +1,32 @@
 export const jobs = [
   {
-    title: "Frontend Developer - Neowyze",
-    time: ["12/2024 - 05/2025"],
+    title: "Glodon",
+    time: ["07/2023 - Present"],
     description:
-      "Mis tareas en Neowyze consisten en desarrollar webs responsivas basadas en diseños proporcionados en Figma, utilizando Astro, React, Tailwind y otras librerías frontend.",
+      "AI-driven architectural design software Concetto product development.",
     list: [
-      "Para el flujo de trabajo, utilizo Jira como herramienta de gestión y Git/GitHub como sistema de control de versiones.",
-      "Trabajo bajo la metodología ágil Scrum, con sprints de 2 semanas y dos reuniones diarias (dailies) para planificar el proyecto y presentar avances",
+      "Primarily responsible for the development of AI cost estimation module.",
+      "Development of carbon emission analysis and other functional modules.",
     ],
   },
   {
-    title: "Frontend Developer - Vegna",
-    time: ["05/2024 - 02/2024"],
-    description: "Desarrollo y mantenimiento de interfaces de usuario con:",
-    list: ["JavaScript - TypeScript", "React - Next.js", "Tailwind", "Shadcn"],
-  },
-  {
-    title: "Frontend Developer - Igrowker",
-    time: ["07/2022 - 08/2022"],
-    description: "Desarrollo y mantenimiento de interfaces de usuario con",
-    list: ["React - React Router - Context api - CSS - Material UI"],
-  },
-  {
-    title: " Web Developer - NoCountry",
-    time: ["03/2022 - 06/2022"],
+    title: "BKCC",
+    time: ["03/2019 - 10/2020"],
     description:
-      "Desarrollo de aplicaciones web responsivas MVP fullstack usando para su desarrollo tecnologías como",
+      "Comprehensive management, big data resource management and data exchange platform Web front-end function design and development.",
     list: [
-      "Frontend : React - React Router - Context api - tailwindcss",
-      "Backend : API REST con Express.js, MongoDB",
+      "Government APP embedded H5 container construction.",
+      "Mobile page and mini-program development and maintenance.",
+    ],
+  },
+  {
+    title: "Lenovo New Vision (Lenovo-AR)",
+    time: ["03/2018 - 06/2018"],
+    description:
+      "Modified the company's official website, participated in the functional development of some front-end projects.",
+    list: [
+      "Front-end development and website maintenance.",
+      "Collaborative development with the team.",
     ],
   },
 ];
