@@ -1,15 +1,19 @@
-import imgBot from "../assets/img-projects/bot.jpg";
-import imgTodo from "../assets/img-projects/todo.jpg";
-import imgStar from "../assets/img-projects/star.png";
-import imgNeural from "../assets/img-projects/neural.jpg";
-import imgOneprompt from "../assets/img-projects/oneprompt.jpg";
-import imgAlgo from "../assets/img-projects/algo.jpg";
-import imgFm from "../assets/img-projects/fm.jpg";
-import imgNeon from "../assets/img-projects/neon.jpg";
-import imgNews from "../assets/img-projects/news.jpg";
-import imgAi from "../assets/img-projects/ai.jpg";
-import imgVoid from "../assets/img-projects/void.jpg";
-import imgFeed from "../assets/img-projects/feed.jpg";
+import imgBot from "../assets/img-projects/bot.idealx.top_.png";
+import imgTodo from "../assets/img-projects/todo.idealx.top_.png";
+import imgStar from "../assets/img-projects/idealx.top_stars_index.html.png";
+import imgNeural from "../assets/img-projects/neural.idealx.top_.png";
+import imgOneprompt from "../assets/img-projects/prompt.idealx.top_.png";
+import imgAlgo from "../assets/img-projects/algo.idealx.top_.png";
+import imgFm from "../assets/img-projects/fm.idealx.top_.png";
+import imgNeon from "../assets/img-projects/neon.idealx.top_.png";
+import imgNews from "../assets/img-projects/news.idealx.top_.png";
+import imgAi from "../assets/img-projects/ai.idealx.top_.png";
+import imgVoid from "../assets/img-projects/void.idealx.top_.png";
+import imgFeed from "../assets/img-projects/feed.idealx.top_.png";
+import imgDevtools from "../assets/img-projects/dev.idealx.top_.png";
+import imgChat from "../assets/img-projects/chat.idealx.top_.png";
+import imgWorkflow from "../assets/img-projects/flow.idealx.top_.png";
+import imgFeMaster from "../assets/img-projects/fe.idealx.top_.png";
 
 export const projects = [
   {
@@ -38,8 +42,8 @@ export const projects = [
       "星空效果可视化项目，展示美丽的星空动画效果。",
     imagen: imgStar.src,
     tecnologias: ["JavaScript", "Canvas", "CSS"],
-    demo: "https://idealdestructor.github.io/stars/index.html",
-    codigo: "https://idealdestructor.github.io/stars/index.html",
+    demo: "https://idealx.top/stars/index.html",
+    codigo: "https://idealx.top/stars/index.html",
     categoria: "frontend",
   },
   {
@@ -85,7 +89,7 @@ export const projects = [
   {
     titulo: "Neon Drive",
     descripcion:
-      "霓虹风格的云存储服务，提供文件存储与管理功能。",
+      "霓虹风格小游戏，重返80年代的街机游戏体验。",
     imagen: imgNeon.src,
     tecnologias: ["JavaScript", "Storage", "Web"],
     demo: "https://neon.idealx.top/",
@@ -115,7 +119,7 @@ export const projects = [
   {
     titulo: "Void Browser",
     descripcion:
-      "轻量级网页浏览器，提供简洁高效的浏览体验。",
+      "自定义起始页，提供简洁高效的浏览体验。",
     imagen: imgVoid.src,
     tecnologias: ["JavaScript", "Browser", "Web"],
     demo: "http://void.idealx.top",
@@ -132,4 +136,43 @@ export const projects = [
     codigo: "http://feed.idealx.top",
     categoria: "frontend",
   },
+  {
+    titulo: "DevTools",
+    descripcion:
+      "开发者工具箱，提供常用的开发工具和资源。",
+    imagen: imgDevtools.src,
+    tecnologias: ["JavaScript", "Web"],
+    demo: "https://dev.idealx.top/",
+    codigo: "https://dev.idealx.top/",
+    categoria: "frontend",
+  },
+  {
+    titulo: "Chat",
+    descripcion:
+      "AI聊天机器人，提供智能对话和任务处理。",
+    imagen: imgChat.src,
+    tecnologias: ["JavaScript", "Web"],
+    demo: "https://chat.idealx.top/",
+    codigo: "https://chat.idealx.top/",
+    categoria: "frontend",
+  },
+  {
+    titulo: "Workflow",
+    descripcion:
+      "AI工作流可视化编辑，用AI提升工作效率。",
+    imagen: imgWorkflow.src,
+    tecnologias: ["JavaScript", "Web"],
+    demo: "https://flow.idealx.top/",
+    codigo: "https://flow.idealx.top/",
+    categoria: "frontend",
+  },
+  {
+    titulo:"前端学习助手",
+    descripcion:"前端学习助手，提供前端学习资源和工具。",
+    imagen: imgFeMaster.src,
+    tecnologias: ["JavaScript", "Web"],
+    demo: "https://fe.idealx.top/",
+    codigo: "https://fe.idealx.top/",
+    categoria: "frontend",
+  }
 ];

@@ -1,7 +1,7 @@
-import imgBot from "../assets/img-projects/bot.jpg";
-import imgNeural from "../assets/img-projects/neural.jpg";
-import imgAlgo from "../assets/img-projects/algo.jpg";
-import imgNeon from "../assets/img-projects/neon.jpg";
+import imgBot from "../assets/img-projects/bot.idealx.top_.png";
+import imgOneprompt from "../assets/img-projects/prompt.idealx.top_.png";
+import imgAlgo from "../assets/img-projects/algo.idealx.top_.png";
+import imgVoid from "../assets/img-projects/void.idealx.top_.png";
 
 export const projects = [
   {
@@ -13,11 +13,14 @@ export const projects = [
     codigo: "http://bot.idealx.top",
   },
   {
-    titulo: "神经网络可视化",
-    imagen: imgNeural.src,
-    tecnologias: ["JavaScript", "AI", "Visualization"],
-    demo: "https://neural.idealx.top/",
-    codigo: "https://neural.idealx.top/",
+    titulo: "One Prompt",
+    descripcion:
+      "AI 提示词工具，帮助用户优化和管理 AI 对话提示词。",
+    imagen: imgOneprompt.src,
+    tecnologias: ["AI", "JavaScript", "Web"],
+    demo: "https://prompt.idealx.top/",
+    codigo: "https://prompt.idealx.top/",
+    categoria: "frontend",
   },
   {
     titulo: "算法可视化",
@@ -27,10 +30,12 @@ export const projects = [
     codigo: "https://algo.idealx.top/",
   },
   {
-    titulo: "Neon Drive",
-    imagen: imgNeon.src,
-    tecnologias: ["JavaScript", "Storage", "Web"],
-    demo: "https://neon.idealx.top/",
-    codigo: "https://neon.idealx.top/",
+    titulo: "Void Browser",
+    descripcion:
+      "自定义起始页，提供简洁高效的浏览体验。",
+    imagen: imgVoid.src,
+    tecnologias: ["JavaScript", "Browser", "Web"],
+    demo: "http://void.idealx.top",
+    codigo: "http://void.idealx.top",
   },
 ];
